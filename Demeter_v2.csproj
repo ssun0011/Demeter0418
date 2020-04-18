@@ -152,10 +152,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CropsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SurvivalsController.cs" />
-    <Compile Include="Controllers\TempsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -293,14 +291,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Survivals\Create.cshtml" />
+    <Content Include="Views\Survivals\Delete.cshtml" />
+    <Content Include="Views\Survivals\Details.cshtml" />
+    <Content Include="Views\Survivals\Edit.cshtml" />
     <Content Include="Views\Survivals\Index.cshtml" />
-    <Content Include="Views\Temps\Create.cshtml" />
-    <Content Include="Views\Temps\Delete.cshtml" />
-    <Content Include="Views\Temps\Details.cshtml" />
-    <Content Include="Views\Temps\Edit.cshtml" />
-    <Content Include="Views\Temps\Index.cshtml" />
-    <Content Include="Views\Crops\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
