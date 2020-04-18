@@ -30,14 +30,14 @@
         <div class="container">
 
             <div class="logo float-left">
-                <h1 class="text-light"><a href="index.html"><span>Demeter</span></a></h1>
+                <h1 class="text-light"><a href="@Url.Action("Index", "Home")"><span>Demeter</span></a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
 
             <nav class="nav-menu float-right d-none d-lg-block">
                 <ul>
-                    <li class="active"><a href="#header">Home</a></li>
+                    <li class="active"><a href="@Url.Action("Index", "Home")">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -45,9 +45,9 @@
                     <li class="drop-down">
                         <a href="">Interactive Maps</a>
                         <ul>
-                            <li><a href="#">Test your seed survival</a></li>
-                            <li><a href="#">Temperature Affect</a></li>
-                            <li><a href="#">Nutrition Result</a></li>
+                            <li><a href="@Url.Action("Index", "Survivals")">Test your seed survival</a></li>
+                            <li><a href="@Url.Action("Index","Temps")">Temperature Affect</a></li>
+                            <li><a href="@Url.Action("Index","Crops")">Nutrition Result</a></li>
 
                         </ul>
                     </li>
@@ -58,7 +58,7 @@
     </header><!-- End #header -->
 
 
-  
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -91,8 +91,10 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
-    </div>
 
-  
+    </div>
+    @RenderSection("scripts", required: false)
+
+
 </body>
 </html>
