@@ -208,6 +208,7 @@
     <Content Include="assets\img\team\team-1.jpg" />
     <Content Include="assets\img\team\team-2.jpg" />
     <Content Include="assets\img\team\team-3.jpg" />
+    <Content Include="assets\img\team\team-4.jpg" />
     <Content Include="assets\js\main.js" />
     <Content Include="assets\vendor\animate.css\animate.css" />
     <Content Include="assets\vendor\animate.css\animate.min.css" />
@@ -293,21 +294,13 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Crops\Create.cshtml" />
-    <Content Include="Views\Crops\Delete.cshtml" />
-    <Content Include="Views\Crops\Details.cshtml" />
-    <Content Include="Views\Crops\Edit.cshtml" />
-    <Content Include="Views\Crops\Index.cshtml" />
-    <Content Include="Views\Survivals\Create.cshtml" />
-    <Content Include="Views\Survivals\Delete.cshtml" />
-    <Content Include="Views\Survivals\Details.cshtml" />
-    <Content Include="Views\Survivals\Edit.cshtml" />
     <Content Include="Views\Survivals\Index.cshtml" />
     <Content Include="Views\Temps\Create.cshtml" />
     <Content Include="Views\Temps\Delete.cshtml" />
     <Content Include="Views\Temps\Details.cshtml" />
     <Content Include="Views\Temps\Edit.cshtml" />
     <Content Include="Views\Temps\Index.cshtml" />
+    <Content Include="Views\Crops\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
