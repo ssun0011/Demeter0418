@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
+using System.Data.OleDb;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 using Demeter_v2.Models;
+using ExcelDataReader;
+using LinqToExcel;
 
 namespace Demeter_v2.Controllers
 {
@@ -20,8 +28,10 @@ namespace Demeter_v2.Controllers
             return View(db.Survivals.ToList());
         }
 
-        // GET: Survivals/Details/5
-        public ActionResult Details(int? id)
+
+
+    // GET: Survivals/Details/5
+    public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -123,5 +133,9 @@ namespace Demeter_v2.Controllers
             }
             base.Dispose(disposing);
         }
+
+      
+
+
     }
 }
