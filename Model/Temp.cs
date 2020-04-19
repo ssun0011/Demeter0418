@@ -7,17 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Demeter_v2.Models
+namespace Demeter_v2.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Survival
+    public partial class Temp
     {
-        public int Id { get; set; }
-        public string Intensity { get; set; }
-        public string Seeding { get; set; }
-        public string Area { get; set; }
-        public string SurvivalResult { get; set; }
+        public int id { get; set; }
+        public double Lat { get; set; }
+        public double Lon { get; set; }
+        public double Temperature { get; set; }
+        public System.DateTime Date { get; set; }
+        public System.TimeSpan Time { get; set; }
     }
 }

@@ -7,16 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Demeter_v2.Models
+namespace Demeter_v2.Model
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Crop
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class Survival
     {
         public int Id { get; set; }
-        public string CropType { get; set; }
-        public string S_name { get; set; }
-        public string Nutrition { get; set; }
+        [Required(ErrorMessage = "Please enter your land intensity.")]
+        public string Intensity { get; set; }
+        [Required(ErrorMessage = "Please enter your land seeding.")]
+        public string Seeding { get; set; }
+        [Required(ErrorMessage = "Please enter your land area size.")]
+        public string Area { get; set; }
+        public string SurvivalResult { get; set; }
+
+
     }
 }

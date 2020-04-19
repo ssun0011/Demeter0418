@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Demeter_v2.Models;
+using Demeter_v2.Model;
 
 namespace Demeter_v2.Controllers
 {
     public class SurvivalsController : Controller
     {
-        private DemeterEntities db = new DemeterEntities();
+        private DemeterEntities2 db = new DemeterEntities2();
 
         // GET: Survivals
         public ActionResult Index()
@@ -123,5 +124,38 @@ namespace Demeter_v2.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+        public ActionResult Test()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Test(String Intensity, String Area, String Seeding)
+        {
+
+            if(db.Survivals.Any(m => m.Intensity == Intensity && m.Area == Area && m.Seeding == Seeding))
+            {
+                Survival validateInputModel = new Survival();
+
+
+                validateInputModel.SurvivalResult = db.Survivals.First(m => m.Intensity == Intensity && m.Area == Area && m.Seeding == Seeding).SurvivalResult;
+
+                ViewBag.Test = validateInputModel.SurvivalResult;
+
+            }
+            else
+            {
+                ViewBag.Test = "Sorry we can't find the result, please enter again";
+            }
+
+
+
+            return View();
+        }
+
+
     }
 }
+

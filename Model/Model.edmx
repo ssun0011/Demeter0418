@@ -7,10 +7,9 @@
       <Schema Namespace="DemeterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Crop">
           <Key>
-            <PropertyRef Name="Id" />
-            <PropertyRef Name="CropType" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" />
           <Property Name="CropType" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="S_name" Type="varchar" MaxLength="50" />
           <Property Name="Nutrition" Type="varchar" MaxLength="50" />
@@ -18,9 +17,6 @@
         <EntityType Name="Survival">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Intensity" />
-            <PropertyRef Name="Seeding" />
-            <PropertyRef Name="Area" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Intensity" Type="varchar" MaxLength="50" Nullable="false" />
@@ -31,10 +27,6 @@
         <EntityType Name="Temp">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="Lat" />
-            <PropertyRef Name="Lon" />
-            <PropertyRef Name="Date" />
-            <PropertyRef Name="Time" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" />
           <Property Name="Lat" Type="float" Nullable="false" />
@@ -55,10 +47,9 @@
       <Schema Namespace="DemeterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Crop">
           <Key>
-            <PropertyRef Name="Id" />
-            <PropertyRef Name="CropType" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="CropType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="S_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Nutrition" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -66,9 +57,6 @@
         <EntityType Name="Survival">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Intensity" />
-            <PropertyRef Name="Seeding" />
-            <PropertyRef Name="Area" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Intensity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
@@ -79,10 +67,6 @@
         <EntityType Name="Temp">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="Lat" />
-            <PropertyRef Name="Lon" />
-            <PropertyRef Name="Date" />
-            <PropertyRef Name="Time" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="Lat" Type="Double" Nullable="false" />
@@ -91,7 +75,7 @@
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Time" Type="Time" Nullable="false" Precision="7" />
         </EntityType>
-        <EntityContainer Name="DemeterEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DemeterEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Crops" EntityType="Self.Crop" />
           <EntitySet Name="Survivals" EntityType="Self.Survival" />
           <EntitySet Name="Temps" EntityType="Self.Temp" />
@@ -101,11 +85,11 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DemeterModelStoreContainer" CdmEntityContainer="DemeterEntities">
+        <EntityContainerMapping StorageEntityContainer="DemeterModelStoreContainer" CdmEntityContainer="DemeterEntities2">
           <EntitySetMapping Name="Crops">
             <EntityTypeMapping TypeName="DemeterModel.Crop">
               <MappingFragment StoreEntitySet="Crop">
-                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="CropType" ColumnName="CropType" />
                 <ScalarProperty Name="S_name" ColumnName="S_name" />
                 <ScalarProperty Name="Nutrition" ColumnName="Nutrition" />

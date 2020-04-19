@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Demeter_v2.Models
+namespace Demeter_v2.Model
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DemeterEntities : DbContext
+    public partial class DemeterEntities2 : DbContext
     {
-        public DemeterEntities()
-            : base("name=DemeterEntities")
+        public DemeterEntities2()
+            : base("name=DemeterEntities2")
         {
         }
     

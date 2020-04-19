@@ -1,4 +1,4 @@
-﻿@model Demeter_v2.Models.Survival
+﻿@model Demeter_v2.Model.Survival
 
 @{
     ViewBag.Title = "Details";
@@ -12,6 +12,30 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            @Html.DisplayNameFor(model => model.Intensity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intensity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seeding)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seeding)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.SurvivalResult)
         </dt>
 
@@ -22,6 +46,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

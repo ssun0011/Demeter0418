@@ -7,18 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Demeter_v2.Models
+namespace Demeter_v2.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Temp
+    public partial class Crop
     {
         public int id { get; set; }
-        public double Lat { get; set; }
-        public double Lon { get; set; }
-        public double Temperature { get; set; }
-        public System.DateTime Date { get; set; }
-        public System.TimeSpan Time { get; set; }
+        public string CropType { get; set; }
+        public string S_name { get; set; }
+        public string Nutrition { get; set; }
     }
 }
